@@ -23,7 +23,7 @@ RUN clang -fsanitize=fuzzer harness.a -o fuzz_newmapxml
 
 FROM ubuntu:20.04
 COPY --from=builder /mxj/fuzzers/fuzz_newmapxml /
-COPY --from=builder /mxj/corpus/*.xml /testsuite/
+COPY --from=builder /mxj/*.xml /testsuite/
 
 ENTRYPOINT []
 CMD ["/fuzz_newmapxml"]
