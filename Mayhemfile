@@ -1,0 +1,5 @@
+project: mxj
+target: mxj
+cmds:
+  - cmd: /fuzz_newmapxml
+    env: {}
